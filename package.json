@@ -31,8 +31,9 @@
     "hapi-error": "^1.6.0",
     "inert": "^4.0.3",
     "redis-connection": "^5.0.0",
-    "socket.io": "^1.7.1",
-    "socket.io-client": "^1.7.1"
+    "socket.io": "^2.0.2",
+    "socket.io-client": "^2.0.2",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "decache": "^4.1.0",
@@ -57,7 +58,9 @@
     "retest": "PORT=8000 node_modules/.bin/nodemon ./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/*.js | node_modules/tap-spec/bin/cmd.js",
     "relint": "node_modules/.bin/nodemon node_modules/.bin/goodparts lib",
     "spec": "PORT=8000 node ./node_modules/tape/bin/tape ./test/*.js | node_modules/tap-spec/bin/cmd.js",
-    "start": "PORT=8000 ./node_modules/.bin/nodemon ./server.js"
+    "start": "PORT=8000 ./node_modules/.bin/nodemon ./server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "pre-commit": [
     "lint",
@@ -65,5 +68,6 @@
   ],
   "engines": {
     "node": ">=6.9.1"
-  }
+  },
+  "snyk": true
 }
