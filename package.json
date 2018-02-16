@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/dwyl/hapi-socketio-redis-chat-example#readme",
   "dependencies": {
-    "hapi": "^16.0.1",
+    "hapi": "^17.0.0",
     "hapi-error": "^1.6.0",
-    "inert": "^4.0.3",
+    "inert": "^5.0.0",
     "redis-connection": "^5.0.0",
     "socket.io": "^1.7.1",
     "socket.io-client": "^1.7.1"
